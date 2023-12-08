@@ -1,7 +1,11 @@
 // ignore_for_file: depend_on_referenced_packages
 
+import 'package:mvvm/view/admin_side_screens/admin_home_screen/home_screen.dart';
+import 'package:mvvm/view/user_side_screens/user_home_screen/home_screen.dart';
 import 'package:mvvm/view_models/admin_side_view_models/home_view_model.dart';
+import 'package:mvvm/view_models/admin_side_view_models/sign_in_view_model.dart';
 import 'package:mvvm/view_models/user_side_view_models/home_view_model.dart';
+import 'package:mvvm/view_models/user_side_view_models/sign_in_view_model.dart';
 import 'package:nested/nested.dart';
 import 'package:provider/provider.dart';
 
@@ -10,10 +14,10 @@ import 'package:provider/provider.dart';
 ///
 List<SingleChildWidget> providers = [
   // view models for admin side
-  ChangeNotifierProvider(create: (_) => AdminHomeViewModel()),
-  ChangeNotifierProvider(create: (_) => AdminHomeViewModel()),
+  ChangeNotifierProvider(create: (_) => AdminSignInViewModel()),
+  ChangeNotifierProvider(create: (_) => AdminSignInViewModel()),
 
   // view models for User side
-  ChangeNotifierProvider(create: (_) => UserHomeViewModel()),
-  ChangeNotifierProvider(create: (_) => UserHomeViewModel()),
+  ChangeNotifierProvider(create: (_) => UserSignInViewModel()),
+  ChangeNotifierProvider(create: (_) => UserSignInViewModel()),
 ];
