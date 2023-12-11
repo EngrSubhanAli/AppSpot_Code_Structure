@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:mvvm/view/user_side_screens/user_home_screen/home_screen.dart';
+import 'package:mvvm/utils/routes/routes.dart';
+import 'package:mvvm/utils/routes/routes_name.dart';
 import 'package:provider/provider.dart';
 
 import 'Core/localiztion/messages/messages.dart';
@@ -33,7 +34,9 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: const UserHomeScreen(),
+              // getPages: Routes.appRoutes(), >>>>>>> use it if you want to use GetX<<<<<<<<<<<<
+              initialRoute: RoutesName.splash,
+              onGenerateRoute: Routes.generateRoute,
             ),
           );
         });
